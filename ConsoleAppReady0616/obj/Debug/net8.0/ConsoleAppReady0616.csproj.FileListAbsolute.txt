@@ -1,0 +1,15 @@
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\ConsoleAppReady0616.exe
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\ConsoleAppReady0616.deps.json
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\ConsoleAppReady0616.runtimeconfig.json
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\ConsoleAppReady0616.dll
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\ConsoleAppReady0616.pdb
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.AssemblyInfoInputs.cache
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.AssemblyInfo.cs
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.csproj.CoreCompileInputs.cache
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.dll
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\refint\ConsoleAppReady0616.dll
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.pdb
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ConsoleAppReady0616.genruntimeconfig.cache
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\obj\Debug\net8.0\ref\ConsoleAppReady0616.dll
+C:\Users\songbo\source\repos\ConsoleAppReady0616\ConsoleAppReady0616\bin\Debug\net8.0\xxx.txt
