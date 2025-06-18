@@ -1,4 +1,6 @@
-﻿using csharp20250604;
+﻿using ConsoleAppReady0616.Models;
+using csharp20250604;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -67,17 +69,115 @@ namespace ConsoleAppReady0616
 
         static void Main(string[] args)
         {
-            MyList<Person> myList = new MyList<Person>(10);
-            myList.Add(new Person(12, "zhangsan"));
-            myList.Add(new Person(7, "lsisi"));
-            myList.Add(new Person(35, "wangwu"));
-
-            List<Person> people = myList.Where(x => x.Age > 10).ToList() ;
-            foreach (var item in people)
+            using var context = new SchoolContext();
+            var lst = context.Database.SqlQuery<StuClassEntity>($"select students.name as stuname, classes.name as classname from students join classes on students.classid = classes.id").ToList();
+            foreach (var item in lst)
             {
-                Console.WriteLine(item);
-            } 
-            
+                Console.WriteLine(item.StuName);
+                Console.WriteLine(item.ClassName);
+            }            //Class c = new Class { Name = "3班", RoomNo = 1 };
+            //context.Classes.Add(c);
+            //context.SaveChanges();
+
+            //Class c1 = new Class { Name = "5班", RoomNo = 1 };
+            //Class c2 = new Class { Name = "6班", RoomNo = 1 };
+            //context.Classes.AddRange(c1, c2);
+            //context.SaveChanges();
+
+            //var stus = context.Students.Where(s => s.Id > 1).Include(s => s.Class).ToList();
+
+            //foreach (var item in stus)
+            //{
+            //    Console.WriteLine(item.Name);
+            //    Console.WriteLine(item.Class.Name);
+            //}
+
+            //Class c = context.Classes.First(c => c.Id == 3);
+            //c.RoomNo = 123;
+            //context.SaveChanges();
+
+            //var lst = context.Classes.Where(c => c.Id > 0).ToList();
+            //foreach (var item in lst)
+            //{
+            //    Console.WriteLine(item.Name);
+            //    foreach (var item1 in item.Students)
+            //    {
+            //        Console.WriteLine(item1.Name);
+            //    }
+
+            //}            //context.Classes.RemoveRange(lst);
+            //context.SaveChanges();
+
+            //var lst = context.Students.Include(s=>s.Class).GroupBy(s => s.Class.Name).Select(g => new
+            //{
+            //    cid = g.Key,
+            //    cnt = g.Count(),
+            //    avg = g.Average(s => s.Score)
+            //});
+
+            //foreach (var item in lst)
+            //{
+            //    Console.WriteLine($"{item.cid} {item.cnt} {item.avg}");
+            //}
+
+
+
+
+            //var classes = context.Classes.Where(c => c.Id > 3).ToList();
+            //foreach (var item in classes)
+            //{
+            //    Console.WriteLine(item.Name);
+
+            //}
+
+            //Class tmp = context.Classes.FirstOrDefault(c=>c.Id == 3);
+            //Console.WriteLine(tmp.Name);
+
+            // 初始化数据（只运行一次）
+            //if (!context.Classes.Any())
+            //{
+            //    var classA = new Class { Name = "一班" };
+            //    var classB = new Class { Name = "二班" };
+
+            //    context.Classes.AddRange(classA, classB);
+
+            //    context.Students.AddRange(
+            //        new Student { Name = "张三", Age = 18, Score = 90, Class = classA },
+            //        new Student { Name = "李四", Age = 19, Score = 85, Class = classA },
+            //        new Student { Name = "王五", Age = 18, Score = 78, Class = classB }
+            //    );
+
+            //    context.SaveChanges();
+            //}
+
+            //// 分组查询：按班级统计学生人数和平均分
+            //var result = context.Students
+            //    .GroupBy(s => s.ClassId)
+            //    .Select(g => new
+            //    {
+            //        ClassId = g.Key,
+            //        Count = g.Count(),
+            //        AvgScore = g.Average(s => s.Score)
+            //    })
+            //    .ToList();
+
+            //foreach (var r in result)
+            //{
+            //    Console.WriteLine($"班级ID: {r.ClassId}，人数: {r.Count}，平均分: {r.AvgScore:F2}");
+            //}
+
+
+            //MyList<Person> myList = new MyList<Person>(10);
+            //myList.Add(new Person(12, "zhangsan"));
+            //myList.Add(new Person(7, "lsisi"));
+            //myList.Add(new Person(35, "wangwu"));
+
+            //List<Person> people = myList.Where(x => x.Age > 10).ToList() ;
+            //foreach (var item in people)
+            //{
+            //    Console.WriteLine(item);
+            //} 
+
             //int defaultValue = default;
             //Console.WriteLine(defaultValue);
             //Console.WriteLine("-".Multiply(50));
@@ -88,8 +188,9 @@ namespace ConsoleAppReady0616
             //foreach (var item in dic)
             //{
             //    Console.WriteLine($"{item.Key}---{item.Value}");
-            //}            //Random random = new Random();
-            //List<Person> lst = Enumerable.Range(1, 10).Select(x => new Person { Age = random.Next(10), Name = "wangwu" + x, Class=x%3 }).ToList();
+            //}            
+            //Random random = new Random();
+            //List<Person> lst = Enumerable.Range(1, 10).Select(x => new Person { Age = random.Next(10), Name = "wangwu" + x, Class = x % 3 }).ToList();
             //foreach (var item in lst)
             //{
             //    Console.WriteLine(item);
